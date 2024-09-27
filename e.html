@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+
+            display: flex;
+            justify-content: space-between;
+        
+            background-color: white;
+            box-shadow: 0 5px 55px -15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; 
+            position: sticky;
+         top: 0;
+         z-index: 1000;
+        
+
+        }
+
+        .logo img{
+            width: 100px;
+         
+        }
+
+        nav ul {
+            display: flex;
+            padding: 10px;
+        }
+
+        nav ul li {
+            list-style: none; 
+            padding: 10px;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            font-family: "Saira Condensed", sans-serif;
+            color: black;
+            font-size: 20px;
+        }
+       nav ul li a:hover{
+        color: gray;
+       }
+
+       .active{
+        color: gray;
+        border-bottom: 2.5px solid coral;
+       }
+
+       main{
+        display: flex;
+        justify-content: space-between;
+      
+       }
+
+       .img img{
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        margin-left: 160px;
+       }
+
+       .text{
+        width: 130%;
+        padding: 20px;
+        margin-left: 40px;
+        margin-top: 100px;
+       }
+
+       .text p{
+        font-family: "Libre Franklin", sans-serif;
+        font-size: 20px;
+        margin-bottom: 20px;
+
+       }
+       .text h4{
+        font-family: "Oswald", sans-serif;
+        font-size: 22px;
+        margin-bottom: 20px;
+
+       }
+       button{
+        background-color: #0026ff;
+        border: 0;
+        border-radius: 5px;
+        width: 150px;
+        padding: 10px;
+        font-family: "Saira Condensed", sans-serif;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+       }
+
+       .sidebar{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        display: flex;
+        box-shadow: 0 5px 55px -15px rgba(0, 0, 0, 0.2);
+background-color: black;
+        flex-direction: column;
+        align-items: start;
+      
+        transition: transform 0.3s ease;
+        display: none;
+ 
+       }
+       .sidebar a{
+        color: white;
+        font-size: 22px;
+       }
+
+       #open{
+        display: none;
+       }
+       .mai{
+        background-image: url('glass-jar-full-money-front-decreasing-stacked-coins-against-white-background.jpg');
+        height: 200px;
+        background-size: cover;
+        background-position-x: right;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    animation: text 2s e infinite;
+    
+
+       }
+.mai p{
+  
+    font-family: "Inter", sans-serif;
+    font-size: 34px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+@keyframes text {
+    25%{
+        color: #0026ff;
+    }
+
+    50%{
+        color: white;
+    }
+}
+
+.ma{
+    margin-top: 25px;
+    max-width: 40%;
+    margin-left: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 55px -15px rgba(0, 0, 0, 0.2);
+    height: 250px;
+    text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 15px;
+
+
+
+}
+.ma button{
+    background-color: orange;
+    border: 0;
+    border-radius: 5px;
+    width: 170px;
+    padding: 10px;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+       
+}
+.her h4{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-family:"Inter", sans-serif ;
+
+}
+.her p{
+    font-family:"Inter", sans-serif ;
+    font-size: 25px;
+}
+.a{
+    display: flex;
+}
+#ca{
+    margin-left: 120px;
+}
+video{
+    margin-left: 26px;
+    width: 95%;
+    border-radius: 10px;
+}
+.sr{
+    margin-top: 20px;
+   
+}
+.sr h4{
+    margin-bottom: 20px;
+    font-family: "Inter", sans-serif;
+     font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+       @media (max-width:768px) {
+        
+        .hide{
+            display: none;
+        }
+
+        .sidebar{
+        position: absolute;
+        top: 0;
+        right: -25%;
+        width: 100%;
+     
+ 
+       }
+
+       #open{
+        display: flex;
+       }
+
+       main{
+        display: flex;
+        flex-direction: column;
+      
+       }
+
+       .text{
+        width: 100%;
+        margin-left: 0;
+      
+       }
+
+       .img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-left: 0;
+       }
+
+       .a{
+    flex-direction: column;
+
+       }
+
+       .ma{
+        max-width: 100%;
+margin-right: 10px;
+       }
+       #ca{
+        margin-left: 12px;
+       }
+       video{
+        margin-left: 10px;
+       }
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="download__3_-removebg-preview.png" alt="">
+
+        </div>
+
+        <nav>
+            <ul>
+                <li class="hide">
+<a href="#" class="active">Home</a>
+                </li>
+
+              <li class="hide">
+                    <a href="#"> Service</a>
+                                    </li>
+                                    <li class="hide">
+                                        <a href="#">About</a>
+                                                        </li>
+                                                        <li class="hide">
+                                                            <a href="#">Contact</a>
+                                                                            </li>
+
+                                                                            <li id="open"><a href="#"><svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M6.16669 12.3334H30.8334M6.16669 24.6667H30.8334" stroke="black" stroke-width="3.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                                </svg></a></li>
+            </ul>
+
+        <ul class="sidebar">
+
+            <li id="close"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="33px" viewBox="0 -960 960 960" width="33px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li>
+<a href="#" class="active">Home</a>
+            </li>
+
+            <li>
+                <a href="#"> Service</a>
+                                </li>
+                                <li>
+                                    <a href="#">About</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Contact</a>
+                                                                        </li>
+        </ul>
+    </nav> 
+    </header>
+
+    <main>
+        <div class="text" data-aos="fade-left">
+            <h4>
+                Welcome to Our Simple Banking System!
+            </h4>
+<p>Deposit your money and withdraw it when you want</p>
+
+<button>Read More</button>
+        </div>
+
+        <div class="img" data-aos="fade-right">
+            <img src="image-upload-landing-page.png" alt="">
+        </div>
+    </main>
+
+    <div class="mai">
+        <p>Deposit will not be accepted up to 500$</p>
+    </div>
+
+    <div class="her">
+<h4>Bank Information</h4>
+<div class="a">
+<div class="ma">
+    <i style="margin-bottom: 20px;" class="fa-solid fa-comments-dollar fa-lg"></i>
+    <p>
+        The amount you deposit is less than $500 per customer</p>
+
+        <button>Deposit Now</button>
+</div>
+
+
+<div class="ma" id="ca">
+    <i style="margin-bottom: 20px;" class="fa-solid fa-exchange-alt fa-lg"></i>
+    <p>
+        The withdrawal is less than 1000$ per customer</p>
+
+        <button style="width: 180px;">withdraw Now</button>
+</div></div>
+    </div>
+<div class="sr">
+    <h4>Exchange Money</h4>
+    <video src="5466776-hd_1920_1080_25fps.mp4" width="500px" controls  autoplay muted loop ></video></div>
+<p style="position: absolute; top: 500%;">jjjjjjj</p>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+
+const open = document.querySelector('#open');
+const close = document.querySelector('#close');
+const sidebar = document.querySelector('.sidebar');
+
+
+open.addEventListener('click',()=>{
+    sidebar.style.display = 'flex';
+})
+
+close.addEventListener('click',()=>{
+    sidebar.style.display = 'none';
+})
+
+
+
+        AOS.init();
+      </script>
+</body>
+</html>
